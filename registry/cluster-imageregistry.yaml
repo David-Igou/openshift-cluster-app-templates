@@ -1,0 +1,20 @@
+apiVersion: imageregistry.operator.openshift.io/v1
+kind: Config
+metadata:
+  finalizers:
+  - imageregistry.operator.openshift.io/finalizer
+  name: cluster
+spec:
+  defaultRoute: true
+  logLevel: Normal
+  operatorLogLevel: Normal
+  replicas: 2
+  rolloutStrategy: RollingUpdate
+  storage:
+    managementState: Managed
+    s3:
+      bucket: changeme
+      encrypt: true
+      region: changeme
+      virtualHostedStyle: false
+  unsupportedConfigOverrides: null
