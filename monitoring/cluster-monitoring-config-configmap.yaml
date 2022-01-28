@@ -6,4 +6,5 @@ metadata:
 data:
   config.yaml: |
     prometheus: 
-      retention: 24h 
+      retention: 7d
+      enableUserWorkload: true
